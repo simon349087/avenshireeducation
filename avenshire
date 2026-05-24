@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avenshire Education - Facebook Cover</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+  }
+
+  .cover-wrapper {
+    width: 820px;
+    height: 312px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+
+  /* Background */
+  .bg {
+    position: absolute;
+    inset: 0;
+    background: #0a3d2e;
+  }
+
+  /* Subtle texture overlay */
+  .bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 60% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+  }
+
+  /* Thin gold accent line */
+  .accent-line {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #c9a96e 30%, #e8c88a 50%, #c9a96e 70%, transparent);
+  }
+  .accent-line-bottom {
+    top: auto; bottom: 0;
+  }
+
+  /* Left content area */
+  .left-content {
+    position: absolute;
+    left: 52px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .logo-area {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .logo-main {
+    font-size: 54px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -1px;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-style: normal;
+  }
+
+  .logo-sub {
+    font-size: 13px;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 8px;
+    font-family: 'Georgia', serif;
+    margin-top: 4px;
+    opacity: 0.9;
+  }
+
+  .divider {
+    width: 280px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(201,169,110,0.8), transparent);
+    margin: 16px 0;
+  }
+
+  .tagline {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 2.5px;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+  }
+
+  .route {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .route-text {
+    font-size: 12px;
+    color: #c9a96e;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif;
+  }
+
+  .route-arrow {
+    color: #c9a96e;
+    font-size: 14px;
+  }
+
+  /* Right side - SVG skyline area */
+  .right-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 420px;
+    height: 312px;
+    z-index: 5;
+  }
+
+  /* Vertical separator */
+  .separator {
+    position: absolute;
+    left: 340px;
+    top: 30px;
+    bottom: 30px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(201,169,110,0.4) 30%, rgba(201,169,110,0.4) 70%, transparent);
+    z-index: 8;
+  }
+
+  /* Small airplane top right */
+  .airplane-wrap {
+    position: absolute;
+    top: 38px;
+    right: 44px;
+    z-index: 12;
+    opacity: 0.95;
+  }
+
+  /* Country flags / badges */
+  .badges {
+    position: absolute;
+    bottom: 28px;
+    left: 52px;
+    display: flex;
+    gap: 12px;
+    z-index: 12;
+  }
+
+  .badge {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(201,169,110,0.35);
+    border-radius: 2px;
+    padding: 4px 10px;
+    font-size: 9px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif;
+  }
+
+  .badge.gold {
+    background: rgba(201,169,110,0.12);
+    border-color: rgba(201,169,110,0.6);
+    color: #c9a96e;
+  }
+
+  /* Glow behind skyline */
+  .skyline-glow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 420px;
+    height: 200px;
+    background: radial-gradient(ellipse at 60% 100%, rgba(255,255,255,0.04) 0%, transparent 65%);
+    z-index: 4;
+  }
+</style>
+</head>
+<body>
+<div class="cover-wrapper">
+  <div class="bg"></div>
+  <div class="accent-line"></div>
+  <div class="accent-line accent-line-bottom"></div>
+  <div class="separator"></div>
+  <div class="skyline-glow"></div>
+
+  <!-- LEFT: Logo + Text -->
+  <div class="left-content">
+    <div class="logo-area">
+      <div class="logo-main">Avenshire</div>
+      <div class="logo-sub">EDUCATION</div>
+    </div>
+    <div class="divider"></div>
+    <div class="tagline">Your Gateway to Global Education</div>
+    <div class="route">
+      <span class="route-text">Bangladesh</span>
+      <span class="route-arrow">&#10230;</span>
+      <span class="route-text">Malaysia</span>
+    </div>
+  </div>
+
+  <!-- Badges bottom left -->
+  <div class="badges">
+    <div class="badge gold">Study Abroad</div>
+    <div class="badge">University Placement</div>
+    <div class="badge">Visa Support</div>
+  </div>
+
+  <!-- RIGHT: Kuala Lumpur Skyline + Airplane SVG -->
+  <div class="right-content">
+
+    <!-- Airplane SVG top right -->
+    <div class="airplane-wrap">
+      <svg width="90" height="48" viewBox="0 0 90 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Airplane silhouette - clean corporate vector -->
+        <path d="M2 26 L58 14 L82 18 C88 19 88 24 82 25 L58 28 L44 44 L36 42 L46 28 L18 32 L14 38 L8 37 L10 26 L2 26Z" 
+              fill="white" opacity="0.92"/>
+        <!-- Engine -->
+        <ellipse cx="42" cy="20.5" rx="8" ry="3.5" fill="white" opacity="0.7"/>
+        <!-- Trail lines -->
+        <line x1="0" y1="23" x2="10" y2="23" stroke="rgba(201,169,110,0.5)" stroke-width="1.5" stroke-dasharray="3 4"/>
+        <line x1="0" y1="27" x2="8" y2="27" stroke="rgba(201,169,110,0.3)" stroke-width="1" stroke-dasharray="2 5"/>
+      </svg>
+    </div>
+
+    <!-- KL Skyline SVG -->
+    <svg width="420" height="312" viewBox="0 0 420 312" fill="none" xmlns="http://www.w3.org/2000/svg"
+         style="position:absolute;bottom:0;right:0;">
+
+      <!-- Merdeka Square / Dataran Merdeka flagpole area (far left of skyline) -->
+      <!-- Flagpole -->
+      <rect x="38" y="160" width="3" height="90" fill="white" opacity="0.5"/>
+      <!-- Flag -->
+      <rect x="41" y="160" width="18" height="12" fill="white" opacity="0.35"/>
+      <!-- Merdeka Square building left -->
+      <rect x="20" y="195" width="28" height="57" fill="white" opacity="0.18"/>
+      <rect x="22" y="200" width="5" height="8" fill="white" opacity="0.1"/>
+      <rect x="30" y="200" width="5" height="8" fill="white" opacity="0.1"/>
+      <!-- Small domed top -->
+      <ellipse cx="34" cy="195" rx="14" ry="5" fill="white" opacity="0.15"/>
+
+      <!-- Sultan Abdul Samad Building (mock gothic columns) -->
+      <rect x="50" y="200" width="6" height="52" fill="white" opacity="0.22"/>
+      <rect x="59" y="195" width="10" height="57" fill="white" opacity="0.25"/>
+      <rect x="72" y="202" width="6" height="50" fill="white" opacity="0.22"/>
+      <!-- Clock tower dome -->
+      <ellipse cx="64" cy="194" rx="7" ry="4" fill="white" opacity="0.3"/>
+      <rect x="62" y="182" width="4" height="12" fill="white" opacity="0.3"/>
+      <circle cx="64" cy="180" r="4" fill="none" stroke="white" stroke-width="1.5" opacity="0.4"/>
+      <!-- Spire -->
+      <polygon points="64,170 62,182 66,182" fill="white" opacity="0.4"/>
+
+      <!-- Generic mid buildings -->
+      <rect x="82" y="210" width="14" height="42" fill="white" opacity="0.15"/>
+      <rect x="98" y="205" width="10" height="47" fill="white" opacity="0.18"/>
+
+      <!-- PETRONAS TWIN TOWERS - center-right, dominant -->
+      <!-- Left Tower -->
+      <g opacity="0.92">
+        <!-- Base -->
+        <rect x="190" y="252" width="36" height="8" fill="white" opacity="0.4"/>
+        <!-- Main shaft -->
+        <rect x="193" y="100" width="30" height="152" fill="white" opacity="0.88"/>
+        <!-- 8-pointed star cross sections (horizontal bands) -->
+        <rect x="190" y="122" width="36" height="4" fill="white" opacity="0.3"/>
+        <rect x="190" y="148" width="36" height="4" fill="white" opacity="0.3"/>
+        <rect x="190" y="174" width="36" height="4" fill="white" opacity="0.3"/>
+        <rect x="190" y="200" width="36" height="4" fill="white" opacity="0.3"/>
+        <rect x="190" y="226" width="36" height="4" fill="white" opacity="0.3"/>
+        <!-- 45-degree rotated star shape top section corners -->
+        <polygon points="190,122 193,100 196,122" fill="white" opacity="0.5"/>
+        <polygon points="223,122 220,100 217,122" fill="white" opacity="0.5"/>
+        <!-- Spire left tower -->
+        <rect x="205" y="50" width="6" height="52" fill="white" opacity="0.85"/>
+        <polygon points="208,38 204,52 212,52" fill="white" opacity="0.9"/>
+        <circle cx="208" cy="37" r="2.5" fill="white" opacity="0.7"/>
+        <!-- Antenna tip -->
+        <rect x="207" y="28" width="2" height="10" fill="white" opacity="0.7"/>
+        <!-- Sky Bridge (between towers) -->
+        <rect x="226" y="165" width="28" height="5" fill="white" opacity="0.7"/>
+        <rect x="226" y="163" width="4" height="9" fill="white" opacity="0.5"/>
+        <rect x="250" y="163" width="4" height="9" fill="white" opacity="0.5"/>
+      </g>
+
+      <!-- Right Tower -->
+      <g opacity="0.92">
+        <!-- Base -->
+        <rect x="254" y="252" width="36" height="8" fill="white" opacity="0.4"/>
+        <!-- Main shaft -->
+        <rect x="257" y="100" width="30" height="152" fill="white" opacity="0.88"/>
+        <!-- Horizontal bands -->
+        <rect x="254" y="122" width="36" height="4" fill="white" opacity="0.3"/>
+        <rect x="254" y="148" width="36" height="4" fill="white" opacity="0.3"/>
+        <rect x="254" y="174" width="36" height="4" fill="white" opacity="0.3"/>
+        <rect x="254" y="200" width="36" height="4" fill="white" opacity="0.3"/>
+        <rect x="254" y="226" width="36" height="4" fill="white" opacity="0.3"/>
+        <!-- Corner cuts -->
+        <polygon points="254,122 257,100 260,122" fill="white" opacity="0.5"/>
+        <polygon points="287,122 284,100 281,122" fill="white" opacity="0.5"/>
+        <!-- Spire right tower -->
+        <rect x="269" y="50" width="6" height="52" fill="white" opacity="0.85"/>
+        <polygon points="272,38 268,52 276,52" fill="white" opacity="0.9"/>
+        <circle cx="272" cy="37" r="2.5" fill="white" opacity="0.7"/>
+        <rect x="271" y="28" width="2" height="10" fill="white" opacity="0.7"/>
+      </g>
+
+      <!-- KL TOWER (Menara KL) - right of twins, slender -->
+      <g opacity="0.85">
+        <!-- Thin shaft -->
+        <rect x="328" y="145" width="8" height="110" fill="white" opacity="0.6"/>
+        <!-- Wider mid section -->
+        <rect x="324" y="130" width="16" height="20" fill="white" opacity="0.7"/>
+        <!-- Bulb / observation deck -->
+        <ellipse cx="332" cy="128" rx="18" ry="12" fill="white" opacity="0.75"/>
+        <rect x="330" y="110" width="4" height="22" fill="white" opacity="0.7"/>
+        <!-- Spire -->
+        <rect x="331" y="72" width="2" height="40" fill="white" opacity="0.8"/>
+        <polygon points="332,62 330,73 334,73" fill="white" opacity="0.85"/>
+      </g>
+
+      <!-- MERDEKA 118 TOWER - tallest, between Petronas and KL Tower -->
+      <g opacity="0.88">
+        <!-- Very thin tapered tower -->
+        <!-- Base section -->
+        <polygon points="306,260 320,260 318,150 308,150" fill="white" opacity="0.7"/>
+        <!-- Upper tapered -->
+        <polygon points="308,150 318,150 315,80 311,80" fill="white" opacity="0.75"/>
+        <!-- Tip -->
+        <polygon points="311,80 315,80 313,45" fill="white" opacity="0.8"/>
+        <!-- Spire -->
+        <rect x="312" y="28" width="2" height="18" fill="white" opacity="0.85"/>
+        <!-- Horizontal accents (floors) -->
+        <rect x="307" y="180" width="12" height="2" fill="white" opacity="0.25"/>
+        <rect x="307" y="210" width="12" height="2" fill="white" opacity="0.25"/>
+        <rect x="307" y="240" width="12" height="2" fill="white" opacity="0.25"/>
+        <rect x="309" y="120" width="8" height="2" fill="white" opacity="0.25"/>
+      </g>
+
+      <!-- Background / filler buildings right side -->
+      <rect x="350" y="225" width="18" height="35" fill="white" opacity="0.14"/>
+      <rect x="370" y="218" width="14" height="42" fill="white" opacity="0.12"/>
+      <rect x="386" y="228" width="20" height="32" fill="white" opacity="0.10"/>
+      <rect x="406" y="230" width="16" height="30" fill="white" opacity="0.09"/>
+
+      <!-- More background left -->
+      <rect x="110" y="220" width="16" height="40" fill="white" opacity="0.13"/>
+      <rect x="128" y="215" width="20" height="45" fill="white" opacity="0.14"/>
+      <rect x="150" y="225" width="14" height="35" fill="white" opacity="0.12"/>
+      <rect x="166" y="218" width="18" height="42" fill="white" opacity="0.13"/>
+
+      <!-- Ground line -->
+      <rect x="0" y="258" width="420" height="2" fill="white" opacity="0.15"/>
+
+      <!-- Soft ground reflection / gradient -->
+      <rect x="0" y="260" width="420" height="52" fill="url(#groundGrad)"/>
+
+      <!-- Stars / lights in buildings -->
+      <circle cx="200" cy="140" r="1" fill="white" opacity="0.4"/>
+      <circle cx="210" cy="158" r="1" fill="white" opacity="0.35"/>
+      <circle cx="265" cy="135" r="1" fill="white" opacity="0.4"/>
+      <circle cx="270" cy="165" r="1" fill="white" opacity="0.35"/>
+      <circle cx="313" cy="90" r="1.5" fill="#c9a96e" opacity="0.8"/>
+
+      <defs>
+        <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="white" stop-opacity="0.06"/>
+          <stop offset="100%" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+  </div>
+
+</div>
+
+<div style="color:rgba(255,255,255,0.3); text-align:center; margin-top:16px; font-size:11px; font-family:Georgia,serif; letter-spacing:2px;">
+  FACEBOOK COVER · 820 × 312px
+</div>
+</body>
+</html>
